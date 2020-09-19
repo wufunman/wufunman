@@ -1,167 +1,147 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>资产者和无产者 | 马列毛邓</title>
-<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600483102158">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600483272736">
 <link rel="stylesheet" href="https://wufunman.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="资产者和无产者 | 马列毛邓 - Atom Feed" href="https://wufunman.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
     <meta name="description" content="   至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的..." />
     <meta name="keywords" content="共产党宣言" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://wufunman.github.io">
-  <img class="avatar" src="https://wufunman.github.io/images/avatar.png?v=1600483102158" alt="">
-  </a>
-  <h1 class="site-title">
-    马列毛邓
-  </h1>
-  <p class="site-description">
-    贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wufunman.github.io">
+        <img src="https://wufunman.github.io/images/avatar.png?v=1600483272736" class="site-logo">
+        <h1 class="site-title">马列毛邓</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              资产者和无产者
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-09-18
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://wufunman.github.io/tag/_sgQtbSks/" class="post-tag">
-                  # 共产党宣言
-                </a>
-              
-            </div>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">资产者和无产者</h2>
+            <div class="post-date">2020-09-18</div>
             
-              <img class="post-feature-image" src="https://wufunman.github.io/post-images/hall.png" alt="">
+              <div class="feature-container" style="background-image: url('https://wufunman.github.io/post-images/hall.png')">
+              </div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <pre><code>   至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的各阶级同归于尽。 在过去的各个历史时代，我们几乎到处都可以看到社会完全划分为各个不同的等级，看到社会地位分成多种多样的层次。在古罗马，有贵族、骑士、平民、奴隶，在中世纪，有封建主、臣仆、行会师傅、帮工、农奴，而且几乎在每一个阶级内部又有一些特殊的阶层。
+            <div class="post-content" v-pre>
+              <pre><code>   至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的各阶级同归于尽。 在过去的各个历史时代，我们几乎到处都可以看到社会完全划分为各个不同的等级，看到社会地位分成多种多样的层次。在古罗马，有贵族、骑士、平民、奴隶，在中世纪，有封建主、臣仆、行会师傅、帮工、农奴，而且几乎在每一个阶级内部又有一些特殊的阶层。
 
    从封建社会的灭亡中产生出来的现代资产阶级社会并没有消灭阶级对立。它只是用新的阶级、新的压迫条件、新的斗争形式代替了旧的。
  但是，我们的时代，资产阶级时代，却有一个特点：它使阶级对立简单化了。整个社会日益分裂为两
 </code></pre>
 <p>大敌对的阵营，分裂为两大相互直接对立的阶级：资产阶级和无产阶级。 从中世纪的农奴中产生了初期城市的城关市民；从这个市民等级中发展出最初的资产阶级分子。 美洲的发现、绕过非洲的航行，给新兴的资产阶级开辟了新天地。东印度和中国的市场、美洲的殖民化、对殖民地的贸易、交换手段和一般商品的增加，使商业、航海业和工业空前高涨，因而使正在崩溃的封建社会内部的革命因素迅速发展。</p>
 
-              </div>
-              <div class="toc-container">
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wufunman.github.io/tag/_sgQtbSks/" class="tag">
+                    共产党宣言
+                  </a>
                 
               </div>
-            </div>
-          </article>
+            
+            
+
+            
+
+          </div>
+
         </div>
-
-        
-
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
       </div>
     </div>
 
-    <script>
-      hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+</script>
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
+
+
+
   </body>
 </html>
