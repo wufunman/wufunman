@@ -1,123 +1,148 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>共产党宣言 | 马列毛邓</title>
+<meta name="description" content="贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600492865366">
+<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600492948613">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wufunman.github.io/styles/main.css">
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。">
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://wufunman.github.io">
-        <img src="https://wufunman.github.io/images/avatar.png?v=1600492865366" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://wufunman.github.io">
+        <img class="avatar" src="https://wufunman.github.io/images/avatar.png?v=1600492948613" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://wufunman.github.io">
         <h1 class="site-title">马列毛邓</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 共产党宣言</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://wufunman.github.io/post/hall/">
-                  <h2 class="post-title">资产者和无产者</h2>
-                </a>
-                <div class="post-date">
-                  2020-09-18
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://wufunman.github.io/post/hall/">
-                  <div class="feature-container" style="background-image: url('https://wufunman.github.io/post-images/hall.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+      <div class="content-container">
 
-          <div class="pagination-container">
-  
-  
-</div>
-
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 共产党宣言
+          </h2> 
         </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://wufunman.github.io/post/hall/">
+        <h2 class="post-title">资产者和无产者</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-09-18</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://wufunman.github.io/tag/_sgQtbSks/">
+                共产党宣言
+                
+              </a>
+            
+          </span>
+        
       </div>
     </div>
+    
+      <a href="https://wufunman.github.io/post/hall/">
+        <div class="feature-container" style="background-image: url('https://wufunman.github.io/post-images/hall.png')">
+        </div>
+      </a>
+    
+  </section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
 
-AOS.init();
+<div class="pagination-container">
+  
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
 
 var app = new Vue({
   el: '#app',
@@ -127,8 +152,6 @@ var app = new Vue({
 })
 
 </script>
-
-
 
 
 

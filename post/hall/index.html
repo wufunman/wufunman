@@ -1,97 +1,99 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>资产者和无产者 | 马列毛邓</title>
+<meta name="description" content="贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600492865366">
+<link rel="shortcut icon" href="https://wufunman.github.io/favicon.ico?v=1600492948613">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wufunman.github.io/styles/main.css">
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的各阶级..." />
-    <meta name="keywords" content="共产党宣言" />
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://wufunman.github.io">
-        <img src="https://wufunman.github.io/images/avatar.png?v=1600492865366" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://wufunman.github.io">
+        <img class="avatar" src="https://wufunman.github.io/images/avatar.png?v=1600492948613" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://wufunman.github.io">
         <h1 class="site-title">马列毛邓</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">资产者和无产者</h2>
-            <div class="post-date">2020-09-18</div>
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://wufunman.github.io/post-images/hall.png')">
+            </div>
+          
+          <h2 class="post-title">资产者和无产者</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-09-18</span>
             
-              <div class="feature-container" style="background-image: url('https://wufunman.github.io/post-images/hall.png')">
-              </div>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://wufunman.github.io/tag/_sgQtbSks/">
+                    共产党宣言
+                    
+                  </a>
+                
+              </span>
             
-            <div class="post-content" v-pre>
-              <p>至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的各阶级同归于尽。 在过去的各个历史时代，我们几乎到处都可以看到社会完全划分为各个不同的等级，看到社会地位分成多种多样的层次。在古罗马，有贵族、骑士、平民、奴隶，在中世纪，有封建主、臣仆、行会师傅、帮工、农奴，而且几乎在每一个阶级内部又有一些特殊的阶层。<br>
+          </div>
+          <div class="post-content">
+            <p>至今一切社会的历史都是阶级斗争的历史。 自由民和奴隶、贵族和平民、领主和农奴、行会师傅和帮工，一句话，压迫者和被压迫 者，始终处于相互对立的地位，进行不断的、有时隐蔽有时公开的斗争，而每一次斗争的结局都是整个社会受到革命改造或者斗争的各阶级同归于尽。 在过去的各个历史时代，我们几乎到处都可以看到社会完全划分为各个不同的等级，看到社会地位分成多种多样的层次。在古罗马，有贵族、骑士、平民、奴隶，在中世纪，有封建主、臣仆、行会师傅、帮工、农奴，而且几乎在每一个阶级内部又有一些特殊的阶层。<br>
 从封建社会的灭亡中产生出来的现代资产阶级社会并没有消灭阶级对立。它只是用新的阶级、新的压迫条件、新的斗争形式代替了旧的。<br>
 但是，我们的时代，资产阶级时代，却有一个特点：它使阶级对立简单化了。整个社会日益分裂为两大敌对的阵营，分裂为两大相互直接对立的阶级：资产阶级和无产阶级。 从中世纪的农奴中产生了初期城市的城关市民；从这个市民等级中发展出最初的资产阶级分子。 美洲的发现、绕过非洲的航行，给新兴的资产阶级开辟了新天地。东印度和中国的市场、美洲的殖民化、对殖民地的贸易、交换手段和一般商品的增加，使商业、航海业和工业空前高涨，因而使正在崩溃的封建社会内部的革命因素迅速发展。<br>
 以前那种封建的或行会的工业经营方式已经不能满足随着新市场的出现而增加的需求了。工场手工业代替了这种经营方式。行会师傅被工业的中间等级排挤掉了；各种行业组织之间的分工随着各个作坊内部的分工的出现而消失了。 但是，市场总是在扩大，需求总是在增加。甚至工场手工业也不再能满足需要了。于是，蒸汽和机器引起了工业生产的革命。现代大工业代替了工场手工业；工业中的百万富翁，一支一支产业大军的首领，现代资产者，代替了工业的中间等级。 大工业建立了由美洲的发现所准备好的世界市场。世界市场使商业、航海业和陆路交通得到了巨大的发展。这种发展又反过来促进了工业的扩展。同时，随着工业、商业、航海业和铁路的扩展，资产阶级也在同一程度上得到发展，增加自己的资本，把中世纪遗留下来的一切阶级排挤到后面去。 由此可见，现代资产阶级本身是一个长期发展过程的产物，是生产方式和交换方式的一系列变革的产物。 资产阶级的这种发展的每一个阶段，都伴随着相应的政治上的进展。它在封建主统治下是被压迫的等级，在公社里是武装的和自治的团体，在一些地方组成独立的城市共和国，在另一些地方组成君主国中的纳税的第三等级；后来，在工场手工业时期，它是等级君主国或专制君主国中同贵族抗衡的势力，而且是大君主国的主要基础；最后，从大工业和世界市场建立的时候起，它在现代的代议制国家里夺得了独占的政治统治。现代的国家政权不过是管理整个资产阶级的共同事务的委员会罢了。 资产阶级在历史上曾经起过非常革命的作用。<br>
@@ -111,30 +113,37 @@
 工人有时也得到胜利，但这种胜利只是暂时的。他们斗争的真正成果并不是直接取得的成功，而是工人的越来越扩大的联合。这种联合由于大工业所造成的日益发达的交通工具而得到发展，这种交通工具把各地的工人彼此联系起来。只要有了这种联系，就能把许多性质相同的地方性的斗争汇合成全国性的斗争，汇合成阶级斗争。而一切阶级斗争都是政治斗争。中世纪的市民靠乡间小道需要几百年才能达到的联合，现代的无产者利用铁路只要几年就可以达到了。<br>
 无产者组织成为阶级，从而组织成为政党这件事，不断地由于工人的自相竞争而受到破坏。但是，这种组织总是重新产生，并且一次比一次更强大，更坚固，更有力。它利用资产阶级内部的分裂，迫使他们用法律形式承认工人的个别利益。英国的十小时工作日法案就是一个例子。</p>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://wufunman.github.io/tag/_sgQtbSks/" class="tag">
-                    共产党宣言
-                  </a>
-                
-              </div>
-            
-            
-
-            
-
           </div>
-
         </div>
+
+        
       </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">贯穿《宣言》的基本思想：每一历史时代的经济生产以及必然由此产生的社会结构，是该时代政治的和精神的历史的基础；因此(从原始土地公有制解体以来)全部历史都是阶级斗争的历史，即社会发展各个阶段上被剥削阶级和剥削阶级之间、被统治阶级和统治阶级之间斗争的历史；而这个斗争现在已经达到这样一个阶段，即被剥削被压迫的阶级(无产阶级)，如果不同时使整个社会永远摆脱剥削、压迫和阶级斗争，就不再能使自己从剥削它压迫它的那个阶级(资产阶级)下解放出来，----这个基本思想完全是属于马克思一个人的。</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wufunman.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
+    <script type="application/javascript">
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
+hljs.initHighlightingOnLoad()
 
 var app = new Vue({
   el: '#app',
@@ -144,8 +153,6 @@ var app = new Vue({
 })
 
 </script>
-
-
 
 
 
